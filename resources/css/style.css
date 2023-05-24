@@ -1,0 +1,755 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #000;
+  font: normal 1.8rem/1.44 "Noto Sans KR", sans-serif;
+}
+
+ul, ol, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img, video {
+  vertical-align: middle;
+}
+
+input, select, textarea {
+  outline: 0;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+body {
+  line-height: 1;
+}
+
+button {
+  border: none;
+}
+
+input {
+  outline: 0;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+#footer {
+  background-color: #1c1c1c;
+  padding: 5rem 0;
+}
+#footer ul li {
+  color: #dadada;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+
+#container {
+  overflow-x: hidden;
+}
+#container .top_banner {
+  background-color: #0062ff;
+  color: #fff;
+  text-align: center;
+  padding: 7rem 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
+#container .inner {
+  max-width: 91.5rem;
+  width: 100%;
+}
+#container .inner.main {
+  color: #fff;
+  margin: 0 auto 11rem;
+}
+#container .inner.main .logo_wrap {
+  display: flex;
+  margin: 2.5rem -4.5rem 12rem -4.5rem;
+  margin-bottom: 12rem;
+}
+#container .inner.main .logo_wrap h1:last-child {
+  margin-left: 2.5rem;
+}
+#container .inner.main .logo_wrap h1 a img {
+  width: 100%;
+}
+#container .inner.main .title {
+  margin: 0 -4.5rem;
+  display: inline-block;
+  width: 50rem;
+  height: 32.8rem;
+}
+#container .inner.main .title img {
+  width: 100%;
+}
+#container .inner.main .title::after {
+  content: "";
+  display: block;
+  width: 104.7rem;
+  height: 61.2rem;
+  background-image: url("../img/common/bg_pc.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: -51rem;
+  right: -51rem;
+}
+#container .inner.main p {
+  margin: 10rem 0;
+  border-top: 0.4rem solid #3d3d3d;
+  border-bottom: 0.4rem solid #3d3d3d;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  padding: 3rem 0;
+  text-align: center;
+}
+#container .inner.main p br.mobile {
+  display: none;
+}
+#container .inner.main p span {
+  color: #2c85e6;
+}
+#container .inner.main .btn_wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 11rem;
+}
+#container .inner.main .btn_wrap a {
+  margin: 0 1.5rem;
+  display: block;
+  width: 44rem;
+  height: 6.5rem;
+  background-color: #0062ff;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 6.5rem;
+  text-align: center;
+}
+#container .inner.main ul {
+  margin-bottom: 6rem;
+}
+#container .inner.main ul li {
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+#container .inner.main ul li:nth-child(1), #container .inner.main ul li:nth-child(3) {
+  width: 55rem;
+}
+#container .inner.main ul li::before {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 3.5rem;
+  background-color: #2c85e6;
+  margin-right: 2.5rem;
+  transform: translateY(1rem);
+}
+#container .inner.main ul li span {
+  font-size: 2.2rem;
+  display: inline-block;
+  width: 6.1rem;
+  color: #2c85e6;
+  margin-right: 2.5rem;
+}
+#container .inner.main table {
+  width: 100%;
+}
+#container .inner.main table thead {
+  padding: 0 13rem 0 5rem;
+}
+#container .inner.main table thead tr {
+  background-color: #236ab8;
+}
+#container .inner.main table thead tr th {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+#container .inner.main table thead tr th:first-child {
+  width: 30%;
+}
+#container .inner.main table thead tr th:nth-child(2) {
+  width: 32%;
+  text-align: start;
+}
+#container .inner.main table thead tr th:last-child {
+  width: 38%;
+  text-align: start;
+}
+#container .inner.main table tbody tr td {
+  font-size: 2.2rem;
+  padding: 2.5rem 0;
+}
+#container .inner.main table tbody tr td span {
+  display: inline-block;
+  margin-left: 5.5rem;
+  font-size: 1.5rem;
+}
+#container .inner.main table tbody tr td span.detail {
+  display: none;
+}
+#container .inner.main table tbody tr td:first-child {
+  width: 30%;
+  text-align: center;
+}
+#container .inner.main table tbody tr td:nth-child(2) {
+  width: 32%;
+  font-size: 1.8rem;
+  border-bottom: 0.1rem solid #2c85e6;
+}
+#container .inner.main table tbody tr td:last-child {
+  font-size: 1.8rem;
+  width: 38%;
+  border-bottom: 0.1rem solid #2c85e6;
+}
+#container .inner.main table tr {
+  background-color: #0d2845;
+}
+#container .inner.main table tr.dark {
+  background-color: #091b2e;
+}
+#container .inner.application {
+  max-width: 100rem;
+  width: 100%;
+  color: #000;
+  margin: 6.5rem auto 11.5rem;
+  border-radius: 3rem;
+  position: relative;
+}
+#container .inner.application button.exit_btn {
+  width: 7rem;
+  height: 7rem;
+  border-top: 0.1rem solid #656565;
+  border-left: 0.1rem solid #656565;
+  background-color: transparent;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 2.5rem;
+  left: -11rem;
+}
+#container .inner.application button.exit_btn:active {
+  transform: rotate(-45deg) scale(0.95);
+}
+#container .inner.application button.submit_btn {
+  width: 44rem;
+  height: 6.5rem;
+  background-color: #0062ff;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+}
+#container .inner.application div {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 7.5rem 17.5rem;
+  border-radius: 3rem;
+  box-sizing: border-box;
+  margin-bottom: 8.5rem;
+}
+#container .inner.application div h3 {
+  font-size: 2.5rem;
+  color: #0062ff;
+  margin-bottom: 1rem;
+}
+#container .inner.application div p {
+  white-space: pre-line;
+  font-size: 1.5rem;
+  color: #0062ff;
+  margin-bottom: 4rem;
+}
+#container .inner.application div p.policy {
+  color: #000;
+  border-top: 0.1rem solid #d9d9d9;
+  border-bottom: 0.1rem solid #d9d9d9;
+  line-height: 2rem;
+  padding: 5rem 0;
+  margin-top: 7rem;
+}
+#container .inner.application div ul {
+  position: relative;
+  padding-top: 3.5rem;
+  margin-bottom: 7rem;
+}
+#container .inner.application div ul::before {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 0.2rem;
+  background-color: #0062ff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#container .inner.application div ul::after {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 0.2rem;
+  background-color: #0062ff;
+  position: absolute;
+  bottom: -14rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#container .inner.application div ul li {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+#container .inner.application div ul li > span {
+  width: 13rem;
+}
+#container .inner.application div ul li > span span {
+  color: #ff0000;
+}
+#container .inner.application div ul li input {
+  border: 0.1rem solid #e9e9e9;
+  width: 80%;
+  height: 5.4rem;
+  padding: 0 1.5rem;
+  display: block;
+  margin: 0 0 0 auto;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+#container .inner.application div label {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+#container .inner.application div label span {
+  border: 0.1rem solid #d0d0d0;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+#container .inner.application div label span::after {
+  content: "";
+  position: absolute;
+  width: 0.8rem;
+  height: 1.2rem;
+  border-right: 0.3rem solid red;
+  border-bottom: 0.3rem solid red;
+  transform: rotate(45deg);
+  display: none;
+  top: -0.1rem;
+  right: 25%;
+}
+#container .inner.application div label input {
+  display: none;
+}
+#container .inner.application div label input:checked + span::after {
+  display: block;
+}
+#container .inner.application_done {
+  color: #fff;
+  max-width: 100rem;
+  height: 56rem;
+  margin: 0 auto;
+}
+#container .inner.application_done::after {
+  content: "";
+  position: relative;
+  top: -57rem;
+  left: -36rem;
+  display: block;
+  width: 96.5rem;
+  height: 35.3rem;
+  background-image: url("../img/common/bg_pc_done.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#container .inner.application_done div {
+  max-width: 30.4rem;
+  width: 100%;
+  margin: 21.5rem 0 21.5rem auto;
+}
+#container .inner.application_done div h3 {
+  font-size: 3rem;
+  text-align: center;
+  white-space: pre-line;
+  margin-bottom: 5.5rem;
+  line-height: 4rem;
+}
+#container .inner.application_done div button {
+  width: 100%;
+  height: 4.8rem;
+  background-color: #0062ff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 1.7rem;
+}
+#container .pop_card {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#container .pop_card.on {
+  display: block;
+}
+#container .pop_card .pop_bg {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#container .pop_card > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  width: 44.2rem;
+  height: 23.5rem;
+  box-sizing: border-box;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+#container .pop_card > div h4 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 5rem 0;
+  width: 30rem;
+  margin: 0 auto;
+  line-height: 2.5rem;
+}
+#container .pop_card > div button {
+  background-color: #0062ff;
+  width: 100%;
+  height: 5.4rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 1.5rem;
+}
+#container .pop_card > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+#container .pop_card > div > div button {
+  width: 20.8rem;
+}
+#container .pop_card > div > div button:first-child {
+  background-color: #fff;
+  border: 0.1rem solid #0062ff;
+  color: #0062ff;
+}
+
+@media screen and (max-width: 1240px) {
+  #container .inner.application {
+    padding: 0 11rem;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  #container .inner.application button.exit_btn {
+    left: 3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #container .top_banner {
+    padding: 4rem 0;
+  }
+  #container .top_banner h2 {
+    font-size: 2.5rem;
+  }
+  #container .inner {
+    padding: 0 2.5rem;
+    box-sizing: border-box;
+  }
+  #container .inner.main .logo_wrap {
+    margin: 2.5rem 0 12rem 0;
+  }
+  #container .inner.main .title {
+    margin: 1.5rem 0 0 0;
+    width: 47.5rem;
+  }
+  #container .inner.main .title::after {
+    right: -35rem;
+  }
+  #container .inner.main ul {
+    margin: 0 4rem 6rem 4rem;
+  }
+  #container .inner.main ul li {
+    width: 100%;
+  }
+  #container .inner.application {
+    padding: 0 2.5rem;
+  }
+  #container .inner.application button.exit_btn {
+    border-top: 0.1rem solid #fff;
+    border-left: 0.1rem solid #fff;
+    top: -14rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  #container .inner.application div {
+    padding: 7.5rem 10rem;
+  }
+  #container .inner.application_done {
+    height: 38rem;
+  }
+  #container .inner.application_done::after {
+    background-image: url("../img/common/bg_mobile_done.png");
+    transform: translateX(-26.5%);
+    width: 96.7rem;
+    height: 41.3rem;
+    top: -80.3rem;
+    left: 50%;
+  }
+  #container .inner.application_done div {
+    margin: 42rem auto 3.5rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  #footer {
+    padding: 2rem 0;
+  }
+  #footer ul li {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+  #container .top_banner {
+    padding: 2rem 0;
+  }
+  #container .top_banner h2 {
+    font-size: 1.6rem;
+  }
+  #container .inner.main {
+    position: relative;
+  }
+  #container .inner.main .logo_wrap {
+    margin: 0.2rem -1rem 0;
+  }
+  #container .inner.main .logo_wrap h1:last-child {
+    margin-left: 1.5rem;
+  }
+  #container .inner.main .logo_wrap h1 a {
+    display: block;
+    width: 5.4rem;
+    height: 1.7rem;
+  }
+  #container .inner.main .logo_wrap h1 a img {
+    vertical-align: super;
+  }
+  #container .inner.main .title {
+    margin: 15rem -1rem 0 -1rem;
+    width: 0;
+    height: 12rem;
+  }
+  #container .inner.main .title img {
+    display: none;
+  }
+  #container .inner.main .title::after {
+    width: 74.9rem;
+    height: 32rem;
+    background-image: url("../img/common/bg_mobile_done.png");
+    position: absolute;
+    top: -0.5rem;
+    right: 50%;
+    transform: translateX(74%);
+  }
+  #container .inner.main p {
+    white-space: pre-wrap;
+    margin: 3.5rem 0 2.5rem 0;
+    border-top: 0.1rem solid #3d3d3d;
+    border-bottom: 0.1rem solid #3d3d3d;
+    font-size: 1.58rem;
+    line-height: 2.5rem;
+    padding: 2rem 0;
+  }
+  #container .inner.main p br.pc {
+    display: none;
+  }
+  #container .inner.main p br.mobile {
+    display: block;
+  }
+  #container .inner.main .btn_wrap {
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+  }
+  #container .inner.main .btn_wrap a {
+    width: 100%;
+    height: 4.5rem;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    line-height: 4.5rem;
+  }
+  #container .inner.main ul {
+    margin: 0 auto 2rem;
+    width: 29.5rem;
+  }
+  #container .inner.main ul li {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  #container .inner.main ul li:nth-child(1), #container .inner.main ul li:nth-child(3) {
+    width: 100%;
+  }
+  #container .inner.main ul li::before {
+    width: 0.3rem;
+    height: 1.6rem;
+    margin-right: 1.5rem;
+    transform: translateY(0.4rem);
+  }
+  #container .inner.main ul li span {
+    font-size: 1.1rem;
+    width: 6.5rem;
+    margin: 0;
+  }
+  #container .inner.main table thead tr th {
+    font-size: 1rem;
+    padding: 1.2rem 0;
+  }
+  #container .inner.main table thead tr th:first-child {
+    width: 32%;
+  }
+  #container .inner.main table thead tr th:nth-child(2) {
+    width: 68%;
+    text-align: center;
+  }
+  #container .inner.main table thead tr th:last-child {
+    display: none;
+  }
+  #container .inner.main table tbody tr td {
+    font-size: 1rem;
+    padding: 1.5rem 0;
+  }
+  #container .inner.main table tbody tr td span {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+  #container .inner.main table tbody tr td span.detail {
+    display: block;
+    margin-left: 0;
+  }
+  #container .inner.main table tbody tr td:first-child {
+    width: 32%;
+  }
+  #container .inner.main table tbody tr td:nth-child(2) {
+    font-size: 1rem;
+    padding-left: 6rem;
+  }
+  #container .inner.main table tbody tr td:last-child {
+    display: none;
+  }
+  #container .inner.application {
+    margin: 3.5rem 0 4rem;
+  }
+  #container .inner.application button.exit_btn {
+    width: 1rem;
+    height: 1rem;
+    border-top: 0.1rem solid #fff;
+    border-left: 0.1rem solid #fff;
+    top: -6.8rem;
+    left: 2.5rem;
+  }
+  #container .inner.application button.submit_btn {
+    max-width: 32rem;
+    width: 100%;
+    height: 4.5rem;
+    font-size: 1.6rem;
+  }
+  #container .inner.application div {
+    padding: 4.5rem 2.5rem;
+    margin-bottom: 4rem;
+  }
+  #container .inner.application div h3 {
+    font-size: 1.6rem;
+  }
+  #container .inner.application div p {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+  #container .inner.application div p.policy {
+    margin-top: 5rem;
+    padding: 1rem 0;
+    line-height: 1.5rem;
+  }
+  #container .inner.application div ul {
+    padding-top: 2rem;
+    margin-bottom: 5rem;
+  }
+  #container .inner.application div ul::after {
+    bottom: -9.5rem;
+  }
+  #container .inner.application div ul li {
+    font-size: 1.3rem;
+  }
+  #container .inner.application div ul li > span {
+    width: 8rem;
+  }
+  #container .inner.application div ul li input {
+    width: 80%;
+    height: 3.3rem;
+    border-radius: 0.5rem;
+  }
+  #container .inner.application div label {
+    font-size: 1rem;
+  }
+  #container .inner.application div label span {
+    width: 1rem;
+    height: 1rem;
+  }
+  #container .inner.application div label span::after {
+    width: 0.3rem;
+    height: 0.7rem;
+  }
+  #container .inner.application_done::after {
+    width: 74.9rem;
+    height: 32rem;
+    top: -69.7rem;
+    left: 50%;
+  }
+  #container .inner.application_done div {
+    margin: 32rem auto 3.5rem;
+  }
+  #container .inner.application_done div h3 {
+    font-size: 2.3rem;
+    margin-bottom: 5rem;
+  }
+  #container .inner.application_done div button {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+}
