@@ -19,7 +19,7 @@
         color:#fff;
         text-align:center;
         padding:7rem 0;
-        font-size:4rem; font-weight:bold;
+        h2 {font-size:4rem; font-weight:bold;}
     }
     .inner {
         max-width:91.5rem;
@@ -199,7 +199,7 @@
                     margin:0 auto;
                 }
             }
-            div {
+            >div {
                 overflow: hidden;
                 background-color:#fff;
                 padding:7.5rem 17.5rem;
@@ -249,7 +249,8 @@
                         display:flex; align-items:center;
                         font-size:2rem;
                         margin-bottom:2.5rem;
-                        >span {
+                        h4 {
+                            font-weight:normal;
                             width:13rem;
                             span {
                                 color:#ff0000;
@@ -257,12 +258,20 @@
                         }
                         input {
                             border:0.1rem solid #e9e9e9;
-                            width:80%; height:5.4rem;
+                            width:100%; height:5.4rem;
                             padding:0 1.5rem;
                             display:block;
                             margin:0 0 0 auto;
                             border-radius:1rem;
                             box-sizing:border-box;
+                        }
+                        >div {
+                            width:100%;position: relative;
+                            span {
+                                position:absolute; top:50%; transform:translateY(-50%);
+                                right:2rem;
+                                font-size:1.5rem;
+                            }
                         }
                     }
                 }
@@ -299,7 +308,7 @@
         }
 
         // 사전 신청 완료 페이지
-        &.application_done {
+        &.submitted {
             color:#fff;
             max-width:100rem;
             height:56rem;
@@ -325,13 +334,322 @@
                     margin-bottom:5.5rem;
                     line-height:4rem;
                 }       
-                button {
+                a {
+                    display: block;
                     width:100%; height:4.8rem;
+                    text-align:center; line-height:4.8rem;
                     background-color:#0062ff;
                     color:#fff;
                     font-weight:bold;
                     font-size:1.8rem;
                     margin-bottom:1.7rem;
+                }
+            }
+        }
+
+        // 사전 신청 조회 페이지
+        &.application_inquiry {
+            color:#fff;
+            max-width:100rem;
+            height:64rem;
+            margin:0 auto;
+            &::after {
+                content:'';
+                position: relative;
+                top:-50rem; left:-45.5rem;
+                display: block;
+                width:96.5rem; height:35.3rem;
+                background-image:url('../img/common/bg_pc_done.png');
+                background-repeat:no-repeat;
+                background-size:cover;
+            }
+            div {
+                max-width:37rem;
+                width:100%;
+                margin:11.5rem 0 11.5rem auto;
+                h3 {
+                    font-size:2.5rem;
+                    padding-bottom:1.6rem;
+                    margin-bottom:3.2rem;
+                    border-bottom:0.2rem solid #fff;
+                }
+                ul {
+                    li {
+                        font-size:2rem;
+                        display:flex; justify-content:space-between; align-items:center;
+                        margin-bottom:2.3rem;
+                        h4 {
+                            font-weight:normal;
+                            width:6.7rem;
+                        }
+                        input {
+                            width:30.3rem; height:4.8rem;
+                            border-radius:0.7rem;
+                            padding:0 1.5rem;
+                            box-sizing:border-box;
+                        }
+                        button {
+                            margin-top:2rem;
+                            margin-bottom:0;
+                            width:37.1rem; height:4.8rem;
+                            background-color:#0062ff;
+                            color:#fff;
+                            font-size:2rem; font-weight:bold;
+                        }
+                    }
+                }
+            }
+            a {
+                width:100%;
+                max-width:37.1rem; height:4.8rem;
+                text-align:center; line-height:4.8rem;
+                font-size:2rem;
+                font-weight:bold;
+                color:#fff;
+                background-color:#0062ff;
+                display:block; margin:0 auto;
+            }
+        }
+
+        // 사전 신청 리스트 조회 페이지
+        &.application_list_inquiry {
+            color:#fff;
+            max-width:37rem;
+            width:100%;
+            margin: 23rem auto 11rem;
+            h3 {
+                font-size:2.5rem;
+                margin-bottom:3.7rem;
+                &::after {
+                    content:'';
+                    display: block;
+                    width:100%; height:0.2rem;
+                    background-color:#fff;
+                    margin-top:1.5rem;
+                }
+            }
+            label {
+                display:flex; justify-content:space-between; align-items:center;
+                font-size:2rem; margin-bottom:23rem;
+                input {
+                    width:27.3rem; height:4.8rem;
+                    border-radius:0.6rem;
+                    padding:0 1.5rem;
+                    box-sizing:border-box;
+                }
+            }
+            button {
+                width:100%; height:4.8rem;
+                background-color:#0062ff;
+                color:#fff; font-weight:bold; font-size:2rem;
+            }
+        }
+
+        // 사전 신청 리스트 페이지
+        &.application_list {
+            max-width:100rem;
+            margin: 0 auto;
+            padding:13rem 0;
+            >div {
+                height:84rem;
+                padding:4.5rem 6rem;
+                background-color:#fff;
+                border-radius:3rem;
+                text-align:center;
+                overflow:hidden;
+                .top_search_bar {
+                    display:flex; justify-content: center;
+                    select {
+                        font-size:1.5rem;
+                        width:17rem; height:5rem;
+                        border:0.2rem solid #e9e9e9;
+                        border-radius:0.7rem;
+                        background-image:url('../img/common/ico_arrow_down.png');
+                        background-repeat:no-repeat;
+                        background-position:12.5rem;
+                        -webkit-appearance:none; /* for chrome */
+                        -moz-appearance:none; /*for firefox*/
+                        appearance:none;
+                        padding:0 2.5rem;
+                        box-sizing:border-box;
+                        margin:0 0.75rem;
+                    }
+                    >div {
+                        position: relative;
+                        >input {
+                            font-size:1.5rem;
+                            width:30rem; height:5rem;
+                            border:0.2rem solid #e9e9e9;
+                            border-radius:0.7rem;
+                            padding:0 1.5rem; box-sizing:border-box;
+                            margin:0 0.75rem;
+                        }
+                        button {
+                            width:2.9rem; height:2.9rem;
+                            background-color:transparent;
+                            background-image:url('../img/common/ico_search.png');
+                            background-repeat:no-repeat;
+                            background-size:cover;
+                            cursor: pointer;
+                            position:absolute; top:50%; right:2rem;
+                            transform:translateY(-50%);
+                            &:active {
+                                transform:translateY(-50%) scale(0.95);
+                            }
+                        }
+                    }
+                }
+                .pc_list {
+                    width:100%;
+                    margin:4rem auto 3rem;
+                    tr {
+                        th,td {
+                            text-align:center;
+                        }
+                    }
+                    thead {
+                        border-top:0.2rem solid #0062ff;
+                        border-bottom:0.2rem solid #0062ff;
+                        tr {
+                            th {
+                                font-size:1.5rem;
+                                font-weight:lighter;
+                                padding:2rem 0;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            border-bottom:0.1rem solid #eaeaea;
+                            td {
+                                font-size:1.5rem;
+                                font-weight:normal;
+                                padding:2rem 0;
+                                label {
+                                    display:flex; align-items:center;
+                                    font-size:1.5rem;
+                                    width:2.3rem;
+                                    margin:0 auto;
+                                    span {
+                                        border:0.1rem solid #d0d0d0;
+                                        width:2rem; height:2rem;
+                                        position: relative;
+                                        // overflow:hidden;
+                                        display: block;
+                                        &::after {
+                                            content:'';
+                                            position:absolute;
+                                            width:0.8rem; height:1.2rem;
+                                            border-right:0.3rem solid red;
+                                            border-bottom:0.3rem solid red;
+                                            transform:rotate(45deg);
+                                            display:none;
+                                            top:-0.1rem; right:25%;
+                                        }
+                                    }
+                                    input {
+                                        display:none;
+                                        &:checked + span {
+                                            &::after {
+                                                display:block;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                button {
+                                    width:5.6rem; height:3rem;
+                                    background-color:#0062ff;
+                                    color:#fff;
+                                    font-size:1.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .mobile_list {
+                    display:none;
+                    >div {
+                        display:flex;
+                        width:100%;
+                        position: relative;
+                        &::after {
+                            content:''; display:block;
+                            width:100vw; height:0.1rem;
+                            background-color:#0062ff;
+                            position:absolute;
+                            bottom:0; left:50%; transform:translate(-50%);
+                        }
+                        button {
+                            padding:2rem 0;
+                            width:33.333%;
+                            font-size:1.3rem;
+                            background-color:transparent;
+                            &.on {
+                                color:#0062ff;
+                            }
+                        }
+                    }
+                    ul {
+                        margin-top:2rem;
+                        li {
+                            &.on {
+                                border:0.1rem solid #0062ff;
+                                button {color:#0062ff;}
+                            }
+                            border:0.1rem solid #d0d0d0;
+                            width:100%;
+                            border-radius:1rem;
+                            display: flex; flex-wrap:wrap;
+                            justify-content:space-between;
+                            padding:1rem 1.8rem;
+                            box-sizing:border-box;
+                            margin-bottom:2rem;
+                            div {
+                                display:flex;
+                                width:49%;
+                                margin:0.75rem 0;
+                                h4, p {
+                                    font-size:1rem; font-weight: normal;
+                                    text-align:start;
+                                }
+                                h4 {width:5.5rem;}
+                            }
+                            button {
+                                margin:0 0 0 auto;
+                                margin-left:31.8%;
+                                text-align:end;
+                                color:#000;
+                                font-weight:bold;
+                                font-size:1rem;
+                                background:transparent;
+                            }
+                        }
+                    }
+                }
+                .pagination {
+                    display: flex; justify-content:center; align-items:center;
+                    &.mobile {display:none;}
+                    >a {
+                        font-size:2rem;
+                        color:#0062ff;
+                        margin:0 1rem;
+                        transform:translateY(0.1rem);
+                    }
+                    ul {
+                        display: flex; align-items:center;
+                        li {
+                            margin:0 1rem;
+                            &.on {
+                                a {
+                                    color:#0062ff;
+                                }
+                            }
+                            a {
+                                font-size:1.5rem;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -366,9 +684,8 @@
             background-color:#fff;
             h4 {
                 font-size:2rem; text-align:center;
-                padding:5rem 0;
-                width:30rem;
-                margin:0 auto;
+                width:fit-content;
+                margin:auto;
                 line-height:2.5rem;
             }
             button {
@@ -422,9 +739,9 @@
         }
 
         .inner {
-            // 메인페이지
             padding:0 2.5rem;
             box-sizing:border-box;
+            // 메인페이지
             &.main {
                 .logo_wrap {
                     margin:2.5rem 0 12rem 0;
@@ -453,12 +770,13 @@
                         width:4rem; height:4rem;
                     }
                 }
-                div {
+                >div {
                     padding:7.5rem 10rem;
                 }
             }
+
             // 사전 신청 완료 페이지
-            &.application_done {
+            &.submitted {
                 height:38rem;
                 &::after {
                     background-image:url('../img/common/bg_mobile_done.png');
@@ -469,6 +787,46 @@
                 div {
                     margin:42rem auto 3.5rem;
                 }
+            }
+            
+            // 사전 신청 조회 페이지
+            &.application_inquiry {
+                height:46.5rem;
+                &::after {
+                    background-image:url('../img/common/bg_mobile_done.png');
+                    transform:translateX(-26.5%);
+                    width:96.7rem; height:41.3rem;
+                    top:-88rem; left:50%;
+                }
+                div {
+                    margin:46.3rem auto 2rem;
+                    
+                    h3 {
+                        padding-bottom:2.3rem;
+                        margin-bottom:3.5rem;
+                    }
+                    ul {
+                        li {
+                            margin-bottom:2.5rem;
+                            input {
+                                width:23.1rem; height:3.3rem;
+                                padding:0 1rem;
+                            }
+                            button {
+                                margin-top:3.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 사전 신청 리스트 조회 페이지
+            &.application_list_inquiry {
+                padding:0;
+            }
+            // 사전 신청 리스트 페이지
+            &.application_list {
+                padding:13rem 2.5rem;
             }
         }
     }
@@ -617,9 +975,6 @@
             }
             // 사전 신청 페이지
             &.application {
-                // max-width:100rem;
-                // width:100%;
-                // margin:6.5rem auto 11.5rem;
                 margin:3.5rem 0 4rem;
                 button {
                     &.exit_btn {
@@ -635,7 +990,7 @@
                         font-size:1.6rem;
                     }
                 }
-                div {
+                >div {
                     padding:4.5rem 2.5rem;
                     margin-bottom:4rem;
                     h3 {
@@ -658,10 +1013,13 @@
                         }
                         li {
                             font-size:1.3rem;
-                            >span {width:8rem;}
+                            h4 {width:8rem;}
                             input {
                                 width:80%; height:3.3rem;
                                 border-radius:0.5rem;
+                            }
+                            >div {
+                                span {font-size:1rem;}
                             }
                         }
                     }
@@ -677,7 +1035,7 @@
                 }
             }
             // 사전 신청 완료 페이지
-            &.application_done {
+            &.submitted {
                 &::after {
                     width:74.9rem; height:32rem;
                     top:-69.7rem; left:50%;
@@ -688,9 +1046,149 @@
                         font-size:2.3rem;
                         margin-bottom:5rem;
                     }
-                    button {
-                        width:100%;
+                    a {
                         font-size:1.6rem;
+                    }
+                }
+            }
+            // 사전 신청 조회 페이지
+            &.application_inquiry {
+                &::after {
+                    width:74.9rem; height:32rem;
+                    top:-78.1rem; left:50%;
+                    transform:translateX(-23%);
+                }
+                div {
+                    max-width:32rem;
+                    margin:37.3rem auto 2rem;
+                    h3 {
+                        font-size:1.6rem;
+                    }
+                    ul {
+                        padding:0 2rem;
+                        li {
+                            h4 {
+                                font-size:1.3rem;
+                            }
+                            button {
+                                margin:3.5rem -2rem 0;
+                                font-size:1.6rem;
+                            }
+                        }
+                    }
+                }
+                a {
+                    font-size:1.6rem;
+                    max-width:32rem;
+                }
+            }
+            // 사전 신청 리스트 조회 페이지
+            &.application_list_inquiry {
+                padding:0 2.5rem;
+                margin:0 auto 4rem;
+                &::before {
+                    content:'';
+                    position: relative;
+                    display: block;
+                    width:74.9rem; height:32rem;
+                    top:-0.1rem; left:50%;
+                    transform:translateX(-23%);
+                    background-image:url('../img/common/bg_mobile_done.png');
+                    background-repeat:no-repeat;
+                    background-size:cover;
+                }
+                h3 {
+                    margin:5rem 0 3.5rem;
+                    font-size:1.6rem;
+                    &::after {
+                        margin-top:2rem;
+                    }
+                }
+                label {
+                    font-size:1.3rem;
+                    margin-bottom:13rem;
+                    input {
+                        width:22rem;
+                        height:3.4rem;
+                    }
+                }
+                button {
+                    font-size:1.6rem;
+                }
+            }
+            // 사전 신청 리스트 페이지
+            &.application_list {
+                padding:3.5rem 2.5rem 3rem;
+                >div {
+                    padding:3rem 1.6rem;
+                    width:100%; height:71rem;
+                    box-sizing:border-box;
+                    position:relative;
+                    .top_search_bar {
+                        select {
+                            display:none;
+                        }
+                        >div {
+                            width:100%;
+                            >input {
+                                width:100%; height:3.4rem;
+                                font-size:1rem;
+                                margin:0;
+                                padding:0 1rem;
+                            }
+                            button {
+                                right:1rem;
+                                width:1.8rem; height:1.8rem;
+                            }
+                        }
+                    }
+                    .pc_list {display:none;}
+                    .mobile_list {display: block;}
+                    .pagination {
+                        &.pc {display:none;}
+                        &.mobile {display: flex;}
+                        position:absolute;
+                        bottom:2rem;
+                        left:50%; transform:translate(-50%);
+                        >a {
+                            margin:0 2.3rem;
+                            transform: translateY(0.3rem);
+                        }
+                        ul {
+                            li {
+                                margin:0 1.5rem;
+                                a {
+                                    font-size:1.1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 팝업
+        .pop_card {
+            &.on {
+            }
+            .pop_bg {
+            }
+            >div {
+                width:25.5rem; height:16.5rem;
+                border-radius:1rem;
+                h4 {
+                    font-size:1.3rem;
+                    width:20rem;
+                }
+                button {
+                    font-size:1.3rem;
+                    height:4rem;
+                    border-radius:0.5rem;
+                }
+                >div {
+                    button {
+                        font-size:1.3rem;
+                        height:4rem;
+                        width:48.5%;
                     }
                 }
             }

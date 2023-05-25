@@ -75,6 +75,8 @@ input {
   color: #fff;
   text-align: center;
   padding: 7rem 0;
+}
+#container .top_banner h2 {
   font-size: 4rem;
   font-weight: bold;
 }
@@ -265,7 +267,7 @@ input {
   display: block;
   margin: 0 auto;
 }
-#container .inner.application div {
+#container .inner.application > div {
   overflow: hidden;
   background-color: #fff;
   padding: 7.5rem 17.5rem;
@@ -273,18 +275,18 @@ input {
   box-sizing: border-box;
   margin-bottom: 8.5rem;
 }
-#container .inner.application div h3 {
+#container .inner.application > div h3 {
   font-size: 2.5rem;
   color: #0062ff;
   margin-bottom: 1rem;
 }
-#container .inner.application div p {
+#container .inner.application > div p {
   white-space: pre-line;
   font-size: 1.5rem;
   color: #0062ff;
   margin-bottom: 4rem;
 }
-#container .inner.application div p.policy {
+#container .inner.application > div p.policy {
   color: #000;
   border-top: 0.1rem solid #d9d9d9;
   border-bottom: 0.1rem solid #d9d9d9;
@@ -292,12 +294,12 @@ input {
   padding: 5rem 0;
   margin-top: 7rem;
 }
-#container .inner.application div ul {
+#container .inner.application > div ul {
   position: relative;
   padding-top: 3.5rem;
   margin-bottom: 7rem;
 }
-#container .inner.application div ul::before {
+#container .inner.application > div ul::before {
   content: "";
   display: block;
   width: 100vw;
@@ -308,7 +310,7 @@ input {
   left: 50%;
   transform: translateX(-50%);
 }
-#container .inner.application div ul::after {
+#container .inner.application > div ul::after {
   content: "";
   display: block;
   width: 100vw;
@@ -319,21 +321,22 @@ input {
   left: 50%;
   transform: translateX(-50%);
 }
-#container .inner.application div ul li {
+#container .inner.application > div ul li {
   display: flex;
   align-items: center;
   font-size: 2rem;
   margin-bottom: 2.5rem;
 }
-#container .inner.application div ul li > span {
+#container .inner.application > div ul li h4 {
+  font-weight: normal;
   width: 13rem;
 }
-#container .inner.application div ul li > span span {
+#container .inner.application > div ul li h4 span {
   color: #ff0000;
 }
-#container .inner.application div ul li input {
+#container .inner.application > div ul li input {
   border: 0.1rem solid #e9e9e9;
-  width: 80%;
+  width: 100%;
   height: 5.4rem;
   padding: 0 1.5rem;
   display: block;
@@ -341,12 +344,23 @@ input {
   border-radius: 1rem;
   box-sizing: border-box;
 }
-#container .inner.application div label {
+#container .inner.application > div ul li > div {
+  width: 100%;
+  position: relative;
+}
+#container .inner.application > div ul li > div span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2rem;
+  font-size: 1.5rem;
+}
+#container .inner.application > div label {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
 }
-#container .inner.application div label span {
+#container .inner.application > div label span {
   border: 0.1rem solid #d0d0d0;
   width: 2rem;
   height: 2rem;
@@ -354,7 +368,7 @@ input {
   position: relative;
   overflow: hidden;
 }
-#container .inner.application div label span::after {
+#container .inner.application > div label span::after {
   content: "";
   position: absolute;
   width: 0.8rem;
@@ -366,19 +380,19 @@ input {
   top: -0.1rem;
   right: 25%;
 }
-#container .inner.application div label input {
+#container .inner.application > div label input {
   display: none;
 }
-#container .inner.application div label input:checked + span::after {
+#container .inner.application > div label input:checked + span::after {
   display: block;
 }
-#container .inner.application_done {
+#container .inner.submitted {
   color: #fff;
   max-width: 100rem;
   height: 56rem;
   margin: 0 auto;
 }
-#container .inner.application_done::after {
+#container .inner.submitted::after {
   content: "";
   position: relative;
   top: -57rem;
@@ -390,26 +404,361 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#container .inner.application_done div {
+#container .inner.submitted div {
   max-width: 30.4rem;
   width: 100%;
   margin: 21.5rem 0 21.5rem auto;
 }
-#container .inner.application_done div h3 {
+#container .inner.submitted div h3 {
   font-size: 3rem;
   text-align: center;
   white-space: pre-line;
   margin-bottom: 5.5rem;
   line-height: 4rem;
 }
-#container .inner.application_done div button {
+#container .inner.submitted div a {
+  display: block;
   width: 100%;
   height: 4.8rem;
+  text-align: center;
+  line-height: 4.8rem;
   background-color: #0062ff;
   color: #fff;
   font-weight: bold;
   font-size: 1.8rem;
   margin-bottom: 1.7rem;
+}
+#container .inner.application_inquiry {
+  color: #fff;
+  max-width: 100rem;
+  height: 64rem;
+  margin: 0 auto;
+}
+#container .inner.application_inquiry::after {
+  content: "";
+  position: relative;
+  top: -50rem;
+  left: -45.5rem;
+  display: block;
+  width: 96.5rem;
+  height: 35.3rem;
+  background-image: url("../img/common/bg_pc_done.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#container .inner.application_inquiry div {
+  max-width: 37rem;
+  width: 100%;
+  margin: 11.5rem 0 11.5rem auto;
+}
+#container .inner.application_inquiry div h3 {
+  font-size: 2.5rem;
+  padding-bottom: 1.6rem;
+  margin-bottom: 3.2rem;
+  border-bottom: 0.2rem solid #fff;
+}
+#container .inner.application_inquiry div ul li {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.3rem;
+}
+#container .inner.application_inquiry div ul li h4 {
+  font-weight: normal;
+  width: 6.7rem;
+}
+#container .inner.application_inquiry div ul li input {
+  width: 30.3rem;
+  height: 4.8rem;
+  border-radius: 0.7rem;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+#container .inner.application_inquiry div ul li button {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  width: 37.1rem;
+  height: 4.8rem;
+  background-color: #0062ff;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#container .inner.application_inquiry a {
+  width: 100%;
+  max-width: 37.1rem;
+  height: 4.8rem;
+  text-align: center;
+  line-height: 4.8rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0062ff;
+  display: block;
+  margin: 0 auto;
+}
+#container .inner.application_list_inquiry {
+  color: #fff;
+  max-width: 37rem;
+  width: 100%;
+  margin: 23rem auto 11rem;
+}
+#container .inner.application_list_inquiry h3 {
+  font-size: 2.5rem;
+  margin-bottom: 3.7rem;
+}
+#container .inner.application_list_inquiry h3::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #fff;
+  margin-top: 1.5rem;
+}
+#container .inner.application_list_inquiry label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 23rem;
+}
+#container .inner.application_list_inquiry label input {
+  width: 27.3rem;
+  height: 4.8rem;
+  border-radius: 0.6rem;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+#container .inner.application_list_inquiry button {
+  width: 100%;
+  height: 4.8rem;
+  background-color: #0062ff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+}
+#container .inner.application_list {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 13rem 0;
+}
+#container .inner.application_list > div {
+  height: 84rem;
+  padding: 4.5rem 6rem;
+  background-color: #fff;
+  border-radius: 3rem;
+  text-align: center;
+  overflow: hidden;
+}
+#container .inner.application_list > div .top_search_bar {
+  display: flex;
+  justify-content: center;
+}
+#container .inner.application_list > div .top_search_bar select {
+  font-size: 1.5rem;
+  width: 17rem;
+  height: 5rem;
+  border: 0.2rem solid #e9e9e9;
+  border-radius: 0.7rem;
+  background-image: url("../img/common/ico_arrow_down.png");
+  background-repeat: no-repeat;
+  background-position: 12.5rem;
+  -webkit-appearance: none; /* for chrome */
+  -moz-appearance: none; /*for firefox*/
+  appearance: none;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+  margin: 0 0.75rem;
+}
+#container .inner.application_list > div .top_search_bar > div {
+  position: relative;
+}
+#container .inner.application_list > div .top_search_bar > div > input {
+  font-size: 1.5rem;
+  width: 30rem;
+  height: 5rem;
+  border: 0.2rem solid #e9e9e9;
+  border-radius: 0.7rem;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  margin: 0 0.75rem;
+}
+#container .inner.application_list > div .top_search_bar > div button {
+  width: 2.9rem;
+  height: 2.9rem;
+  background-color: transparent;
+  background-image: url("../img/common/ico_search.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+#container .inner.application_list > div .top_search_bar > div button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+#container .inner.application_list > div .pc_list {
+  width: 100%;
+  margin: 4rem auto 3rem;
+}
+#container .inner.application_list > div .pc_list tr th, #container .inner.application_list > div .pc_list tr td {
+  text-align: center;
+}
+#container .inner.application_list > div .pc_list thead {
+  border-top: 0.2rem solid #0062ff;
+  border-bottom: 0.2rem solid #0062ff;
+}
+#container .inner.application_list > div .pc_list thead tr th {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  padding: 2rem 0;
+}
+#container .inner.application_list > div .pc_list tbody tr {
+  border-bottom: 0.1rem solid #eaeaea;
+}
+#container .inner.application_list > div .pc_list tbody tr td {
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 2rem 0;
+}
+#container .inner.application_list > div .pc_list tbody tr td label {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 2.3rem;
+  margin: 0 auto;
+}
+#container .inner.application_list > div .pc_list tbody tr td label span {
+  border: 0.1rem solid #d0d0d0;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  display: block;
+}
+#container .inner.application_list > div .pc_list tbody tr td label span::after {
+  content: "";
+  position: absolute;
+  width: 0.8rem;
+  height: 1.2rem;
+  border-right: 0.3rem solid red;
+  border-bottom: 0.3rem solid red;
+  transform: rotate(45deg);
+  display: none;
+  top: -0.1rem;
+  right: 25%;
+}
+#container .inner.application_list > div .pc_list tbody tr td label input {
+  display: none;
+}
+#container .inner.application_list > div .pc_list tbody tr td label input:checked + span::after {
+  display: block;
+}
+#container .inner.application_list > div .pc_list tbody tr td button {
+  width: 5.6rem;
+  height: 3rem;
+  background-color: #0062ff;
+  color: #fff;
+  font-size: 1.5rem;
+}
+#container .inner.application_list > div .mobile_list {
+  display: none;
+}
+#container .inner.application_list > div .mobile_list > div {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+#container .inner.application_list > div .mobile_list > div::after {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 0.1rem;
+  background-color: #0062ff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+#container .inner.application_list > div .mobile_list > div button {
+  padding: 2rem 0;
+  width: 33.333%;
+  font-size: 1.3rem;
+  background-color: transparent;
+}
+#container .inner.application_list > div .mobile_list > div button.on {
+  color: #0062ff;
+}
+#container .inner.application_list > div .mobile_list ul {
+  margin-top: 2rem;
+}
+#container .inner.application_list > div .mobile_list ul li {
+  border: 0.1rem solid #d0d0d0;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 1.8rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+#container .inner.application_list > div .mobile_list ul li.on {
+  border: 0.1rem solid #0062ff;
+}
+#container .inner.application_list > div .mobile_list ul li.on button {
+  color: #0062ff;
+}
+#container .inner.application_list > div .mobile_list ul li div {
+  display: flex;
+  width: 49%;
+  margin: 0.75rem 0;
+}
+#container .inner.application_list > div .mobile_list ul li div h4, #container .inner.application_list > div .mobile_list ul li div p {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: start;
+}
+#container .inner.application_list > div .mobile_list ul li div h4 {
+  width: 5.5rem;
+}
+#container .inner.application_list > div .mobile_list ul li button {
+  margin: 0 0 0 auto;
+  margin-left: 31.8%;
+  text-align: end;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  background: transparent;
+}
+#container .inner.application_list > div .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container .inner.application_list > div .pagination.mobile {
+  display: none;
+}
+#container .inner.application_list > div .pagination > a {
+  font-size: 2rem;
+  color: #0062ff;
+  margin: 0 1rem;
+  transform: translateY(0.1rem);
+}
+#container .inner.application_list > div .pagination ul {
+  display: flex;
+  align-items: center;
+}
+#container .inner.application_list > div .pagination ul li {
+  margin: 0 1rem;
+}
+#container .inner.application_list > div .pagination ul li.on a {
+  color: #0062ff;
+}
+#container .inner.application_list > div .pagination ul li a {
+  font-size: 1.5rem;
 }
 #container .pop_card {
   display: none;
@@ -449,9 +798,9 @@ input {
 #container .pop_card > div h4 {
   font-size: 2rem;
   text-align: center;
-  padding: 5rem 0;
-  width: 30rem;
-  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
   line-height: 2.5rem;
 }
 #container .pop_card > div button {
@@ -523,13 +872,13 @@ input {
     width: 4rem;
     height: 4rem;
   }
-  #container .inner.application div {
+  #container .inner.application > div {
     padding: 7.5rem 10rem;
   }
-  #container .inner.application_done {
+  #container .inner.submitted {
     height: 38rem;
   }
-  #container .inner.application_done::after {
+  #container .inner.submitted::after {
     background-image: url("../img/common/bg_mobile_done.png");
     transform: translateX(-26.5%);
     width: 96.7rem;
@@ -537,8 +886,43 @@ input {
     top: -80.3rem;
     left: 50%;
   }
-  #container .inner.application_done div {
+  #container .inner.submitted div {
     margin: 42rem auto 3.5rem;
+  }
+  #container .inner.application_inquiry {
+    height: 46.5rem;
+  }
+  #container .inner.application_inquiry::after {
+    background-image: url("../img/common/bg_mobile_done.png");
+    transform: translateX(-26.5%);
+    width: 96.7rem;
+    height: 41.3rem;
+    top: -88rem;
+    left: 50%;
+  }
+  #container .inner.application_inquiry div {
+    margin: 46.3rem auto 2rem;
+  }
+  #container .inner.application_inquiry div h3 {
+    padding-bottom: 2.3rem;
+    margin-bottom: 3.5rem;
+  }
+  #container .inner.application_inquiry div ul li {
+    margin-bottom: 2.5rem;
+  }
+  #container .inner.application_inquiry div ul li input {
+    width: 23.1rem;
+    height: 3.3rem;
+    padding: 0 1rem;
+  }
+  #container .inner.application_inquiry div ul li button {
+    margin-top: 3.5rem;
+  }
+  #container .inner.application_list_inquiry {
+    padding: 0;
+  }
+  #container .inner.application_list {
+    padding: 13rem 2.5rem;
   }
 }
 @media screen and (max-width: 750px) {
@@ -690,66 +1074,206 @@ input {
     height: 4.5rem;
     font-size: 1.6rem;
   }
-  #container .inner.application div {
+  #container .inner.application > div {
     padding: 4.5rem 2.5rem;
     margin-bottom: 4rem;
   }
-  #container .inner.application div h3 {
+  #container .inner.application > div h3 {
     font-size: 1.6rem;
   }
-  #container .inner.application div p {
+  #container .inner.application > div p {
     font-size: 1rem;
     margin-bottom: 3rem;
   }
-  #container .inner.application div p.policy {
+  #container .inner.application > div p.policy {
     margin-top: 5rem;
     padding: 1rem 0;
     line-height: 1.5rem;
   }
-  #container .inner.application div ul {
+  #container .inner.application > div ul {
     padding-top: 2rem;
     margin-bottom: 5rem;
   }
-  #container .inner.application div ul::after {
+  #container .inner.application > div ul::after {
     bottom: -9.5rem;
   }
-  #container .inner.application div ul li {
+  #container .inner.application > div ul li {
     font-size: 1.3rem;
   }
-  #container .inner.application div ul li > span {
+  #container .inner.application > div ul li h4 {
     width: 8rem;
   }
-  #container .inner.application div ul li input {
+  #container .inner.application > div ul li input {
     width: 80%;
     height: 3.3rem;
     border-radius: 0.5rem;
   }
-  #container .inner.application div label {
+  #container .inner.application > div ul li > div span {
     font-size: 1rem;
   }
-  #container .inner.application div label span {
+  #container .inner.application > div label {
+    font-size: 1rem;
+  }
+  #container .inner.application > div label span {
     width: 1rem;
     height: 1rem;
   }
-  #container .inner.application div label span::after {
+  #container .inner.application > div label span::after {
     width: 0.3rem;
     height: 0.7rem;
   }
-  #container .inner.application_done::after {
+  #container .inner.submitted::after {
     width: 74.9rem;
     height: 32rem;
     top: -69.7rem;
     left: 50%;
   }
-  #container .inner.application_done div {
+  #container .inner.submitted div {
     margin: 32rem auto 3.5rem;
   }
-  #container .inner.application_done div h3 {
+  #container .inner.submitted div h3 {
     font-size: 2.3rem;
     margin-bottom: 5rem;
   }
-  #container .inner.application_done div button {
-    width: 100%;
+  #container .inner.submitted div a {
     font-size: 1.6rem;
+  }
+  #container .inner.application_inquiry::after {
+    width: 74.9rem;
+    height: 32rem;
+    top: -78.1rem;
+    left: 50%;
+    transform: translateX(-23%);
+  }
+  #container .inner.application_inquiry div {
+    max-width: 32rem;
+    margin: 37.3rem auto 2rem;
+  }
+  #container .inner.application_inquiry div h3 {
+    font-size: 1.6rem;
+  }
+  #container .inner.application_inquiry div ul {
+    padding: 0 2rem;
+  }
+  #container .inner.application_inquiry div ul li h4 {
+    font-size: 1.3rem;
+  }
+  #container .inner.application_inquiry div ul li button {
+    margin: 3.5rem -2rem 0;
+    font-size: 1.6rem;
+  }
+  #container .inner.application_inquiry a {
+    font-size: 1.6rem;
+    max-width: 32rem;
+  }
+  #container .inner.application_list_inquiry {
+    padding: 0 2.5rem;
+    margin: 0 auto 4rem;
+  }
+  #container .inner.application_list_inquiry::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 74.9rem;
+    height: 32rem;
+    top: -0.1rem;
+    left: 50%;
+    transform: translateX(-23%);
+    background-image: url("../img/common/bg_mobile_done.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #container .inner.application_list_inquiry h3 {
+    margin: 5rem 0 3.5rem;
+    font-size: 1.6rem;
+  }
+  #container .inner.application_list_inquiry h3::after {
+    margin-top: 2rem;
+  }
+  #container .inner.application_list_inquiry label {
+    font-size: 1.3rem;
+    margin-bottom: 13rem;
+  }
+  #container .inner.application_list_inquiry label input {
+    width: 22rem;
+    height: 3.4rem;
+  }
+  #container .inner.application_list_inquiry button {
+    font-size: 1.6rem;
+  }
+  #container .inner.application_list {
+    padding: 3.5rem 2.5rem 3rem;
+  }
+  #container .inner.application_list > div {
+    padding: 3rem 1.6rem;
+    width: 100%;
+    height: 71rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+  #container .inner.application_list > div .top_search_bar select {
+    display: none;
+  }
+  #container .inner.application_list > div .top_search_bar > div {
+    width: 100%;
+  }
+  #container .inner.application_list > div .top_search_bar > div > input {
+    width: 100%;
+    height: 3.4rem;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0 1rem;
+  }
+  #container .inner.application_list > div .top_search_bar > div button {
+    right: 1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  #container .inner.application_list > div .pc_list {
+    display: none;
+  }
+  #container .inner.application_list > div .mobile_list {
+    display: block;
+  }
+  #container .inner.application_list > div .pagination {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #container .inner.application_list > div .pagination.pc {
+    display: none;
+  }
+  #container .inner.application_list > div .pagination.mobile {
+    display: flex;
+  }
+  #container .inner.application_list > div .pagination > a {
+    margin: 0 2.3rem;
+    transform: translateY(0.3rem);
+  }
+  #container .inner.application_list > div .pagination ul li {
+    margin: 0 1.5rem;
+  }
+  #container .inner.application_list > div .pagination ul li a {
+    font-size: 1.1rem;
+  }
+  #container .pop_card > div {
+    width: 25.5rem;
+    height: 16.5rem;
+    border-radius: 1rem;
+  }
+  #container .pop_card > div h4 {
+    font-size: 1.3rem;
+    width: 20rem;
+  }
+  #container .pop_card > div button {
+    font-size: 1.3rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+  }
+  #container .pop_card > div > div button {
+    font-size: 1.3rem;
+    height: 4rem;
+    width: 48.5%;
   }
 }

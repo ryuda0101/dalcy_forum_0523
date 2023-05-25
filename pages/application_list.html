@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 C FORUM</title>
+    <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="top_banner">
+            <h2>C FORUM 사전신청 리스트</h2>
+        </div>
+        <div class="inner application_list">
+            <div>
+                <div class="top_search_bar">
+                    <select>
+                        <option>이름</option>
+                    </select>
+                    <div>
+                        <input type="text" placeholder="검색어를 입력해주세요">
+                        <button class="button" type="button"></button>
+                    </div>
+                </div>
+                <table class="pc_list">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>NO</th>
+                            <th>이름</th>
+                            <th>소속</th>
+                            <th>직책</th>
+                            <th>연락처</th>
+                            <th>추가연락처</th>
+                            <th>이메일</th>
+                            <th>신청일</th>
+                            <th>삭제</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label><input type="checkbox"><span aria-hidden="true"></span></td></label>
+                            <td>1</td>
+                            <td>김*남</td>
+                            <td></td>
+                            <td></td>
+                            <td>000-0000-0000</td>
+                            <td></td>
+                            <td></td>
+                            <td>23.05.01</td>
+                            <td><button class="button" type="button">삭제</button></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox"><span aria-hidden="true"></span></td></label>
+                            <td>2</td>
+                            <td>이*혜</td>
+                            <td></td>
+                            <td></td>
+                            <td>000-0000-0000</td>
+                            <td></td>
+                            <td></td>
+                            <td>23.05.01</td>
+                            <td><button class="button" type="button">삭제</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mobile_list">
+                    <!-- button태그에 class on이 붙으면 텍스트가 파란색으로 활성화 됩니다. -->
+                    <div>
+                        <button class="button on" type="button">이름</button>
+                        <button class="button" type="button">소속</button>
+                        <button class="button" type="button">연락처</button>
+                    </div>
+                    <ul>
+                        <!-- li태그에 class on이 붙으면 파란 테두리로 활성화 됩니다. -->
+                        <li class="on">
+                            <div>
+                                <h4>이름</h4>
+                                <p>김*남</p>
+                            </div>
+                            <button class="button" type="button">삭제</button>
+                            <div>
+                                <h4>소속</h4>
+                                <p></p>
+                            </div>
+                            <div>
+                                <h4>직책</h4>
+                                <p></p>
+                            </div>
+                            <div>
+                                <h4>연락처</h4>
+                                <p>000-0000-0000</p>
+                            </div>
+                            <div>
+                                <h4>추가 연락처</h4>
+                                <p>000-0000-0000</p>
+                            </div>
+                            <div>
+                                <h4>이메일</h4>
+                                <p></p>
+                            </div>
+                            <div>
+                                <h4>신청일</h4>
+                                <p>23.05.01</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <h4>이름</h4>
+                                <p>이*혜</p>
+                            </div>
+                            <button class="button" type="button">삭제</button>
+                            <div>
+                                <h4>소속</h4>
+                                <p></p>
+                            </div>
+                            <div>
+                                <h4>직책</h4>
+                                <p></p>
+                            </div>
+                            <div>
+                                <h4>연락처</h4>
+                                <p>000-0000-0000</p>
+                            </div>
+                            <div>
+                                <h4>추가 연락처</h4>
+                                <p>000-0000-0000</p>
+                            </div>
+                            <div>
+                                <h4>이메일</h4>
+                                <p></p>
+                            </div>
+                            <div>
+                                <h4>신청일</h4>
+                                <p>23.05.01</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pagination pc">
+                    <a href="#" title="이전 페이지로 이동">&lt;</a>
+                    <ul class="pc">
+                        <!-- 페이지네이션에서 li태그에 class on이 붙으면 파란색으로 활성화 됩니다. -->
+                        <li class="on"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">&hellip;</a></li>
+                        <li><a href="#">9</a></li>
+                        <li><a href="#">10</a></li>
+                    </ul>
+                    <a href="#" title="다음 페이지로 이동">&gt;</a>
+                </div>
+                <div class="pagination mobile">
+                    <a href="#" title="이전 페이지로 이동">&lt;</a>
+                    <ul class="pc">
+                        <!-- 페이지네이션에서 li태그에 class on이 붙으면 파란색으로 활성화 됩니다. -->
+                        <li class="on"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                    <a href="#" title="다음 페이지로 이동">&gt;</a>
+                </div>
+            </div>
+        </div>
+        <!-- popup -->
+        <!-- article 태그에 class on이 붙으면 화면에 나타납니다. -->
+        <article class="pop_card">
+            <i class="pop_bg" aria-hidden="true"></i>
+            <div>
+                <h4>C FORUM 사전 신청자 명단을 <br>삭제하시겠습니까?</h4>
+                <div>
+                    <button type="button" class="button">아니요</button>
+                    <button type="button" class="button">확인</button>
+                </div>
+            </div>
+        </article>
+    </div>
+    <div id="footer">
+        <ul>
+            <li>씨엔티테크(주)</li>
+            <li>서울시 서대문구 증가로29길 35북가좌동, 씨엔티테크빌딩</li>
+            <li>사업자등록번호: 119.81.66566TEL: 02.309.0380FAX: 02.309.0381</li>
+            <li>© 씨엔티테크 CO.LTD ALL RIGHT RESERVED.</li>
+        </ul>
+    </div>
+</body>
+</html>
