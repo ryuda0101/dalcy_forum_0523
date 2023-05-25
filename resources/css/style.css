@@ -373,8 +373,8 @@ input {
   position: absolute;
   width: 0.8rem;
   height: 1.2rem;
-  border-right: 0.3rem solid red;
-  border-bottom: 0.3rem solid red;
+  border-right: 0.2rem solid red;
+  border-bottom: 0.2rem solid red;
   transform: rotate(45deg);
   display: none;
   top: -0.1rem;
@@ -446,36 +446,45 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#container .inner.application_inquiry div {
+#container .inner.application_inquiry > div {
   max-width: 37rem;
   width: 100%;
   margin: 11.5rem 0 11.5rem auto;
 }
-#container .inner.application_inquiry div h3 {
+#container .inner.application_inquiry > div h3 {
   font-size: 2.5rem;
   padding-bottom: 1.6rem;
   margin-bottom: 3.2rem;
   border-bottom: 0.2rem solid #fff;
 }
-#container .inner.application_inquiry div ul li {
+#container .inner.application_inquiry > div ul li {
   font-size: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2.3rem;
+  position: relative;
 }
-#container .inner.application_inquiry div ul li h4 {
+#container .inner.application_inquiry > div ul li h4 {
   font-weight: normal;
   width: 6.7rem;
 }
-#container .inner.application_inquiry div ul li input {
+#container .inner.application_inquiry > div ul li input {
   width: 30.3rem;
   height: 4.8rem;
   border-radius: 0.7rem;
   padding: 0 1.5rem;
   box-sizing: border-box;
 }
-#container .inner.application_inquiry div ul li button {
+#container .inner.application_inquiry > div ul li > div span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  right: 1.5rem;
+  font-size: 1.5rem;
+}
+#container .inner.application_inquiry > div ul li button {
   margin-top: 2rem;
   margin-bottom: 0;
   width: 37.1rem;
@@ -643,8 +652,8 @@ input {
   position: absolute;
   width: 0.8rem;
   height: 1.2rem;
-  border-right: 0.3rem solid red;
-  border-bottom: 0.3rem solid red;
+  border-right: 0.2rem solid red;
+  border-bottom: 0.2rem solid red;
   transform: rotate(45deg);
   display: none;
   top: -0.1rem;
@@ -803,7 +812,7 @@ input {
   margin: auto;
   line-height: 2.5rem;
 }
-#container .pop_card > div button {
+#container .pop_card > div button, #container .pop_card > div a {
   background-color: #0062ff;
   width: 100%;
   height: 5.4rem;
@@ -812,14 +821,19 @@ input {
   font-weight: bold;
   border-radius: 1.5rem;
 }
+#container .pop_card > div a {
+  line-height: 5.4rem;
+  text-align: center;
+  cursor: auto;
+}
 #container .pop_card > div > div {
   display: flex;
   justify-content: space-between;
 }
-#container .pop_card > div > div button {
+#container .pop_card > div > div button, #container .pop_card > div > div a {
   width: 20.8rem;
 }
-#container .pop_card > div > div button:first-child {
+#container .pop_card > div > div button:first-child, #container .pop_card > div > div a:first-child {
   background-color: #fff;
   border: 0.1rem solid #0062ff;
   color: #0062ff;
@@ -900,22 +914,22 @@ input {
     top: -88rem;
     left: 50%;
   }
-  #container .inner.application_inquiry div {
+  #container .inner.application_inquiry > div {
     margin: 46.3rem auto 2rem;
   }
-  #container .inner.application_inquiry div h3 {
+  #container .inner.application_inquiry > div h3 {
     padding-bottom: 2.3rem;
     margin-bottom: 3.5rem;
   }
-  #container .inner.application_inquiry div ul li {
+  #container .inner.application_inquiry > div ul li {
     margin-bottom: 2.5rem;
   }
-  #container .inner.application_inquiry div ul li input {
+  #container .inner.application_inquiry > div ul li input {
     width: 23.1rem;
     height: 3.3rem;
     padding: 0 1rem;
   }
-  #container .inner.application_inquiry div ul li button {
+  #container .inner.application_inquiry > div ul li button {
     margin-top: 3.5rem;
   }
   #container .inner.application_list_inquiry {
@@ -1145,22 +1159,25 @@ input {
     left: 50%;
     transform: translateX(-23%);
   }
-  #container .inner.application_inquiry div {
+  #container .inner.application_inquiry > div {
     max-width: 32rem;
     margin: 37.3rem auto 2rem;
   }
-  #container .inner.application_inquiry div h3 {
+  #container .inner.application_inquiry > div h3 {
     font-size: 1.6rem;
   }
-  #container .inner.application_inquiry div ul {
+  #container .inner.application_inquiry > div ul {
     padding: 0 2rem;
   }
-  #container .inner.application_inquiry div ul li h4 {
+  #container .inner.application_inquiry > div ul li h4 {
     font-size: 1.3rem;
   }
-  #container .inner.application_inquiry div ul li button {
+  #container .inner.application_inquiry > div ul li button {
     margin: 3.5rem -2rem 0;
     font-size: 1.6rem;
+  }
+  #container .inner.application_inquiry > div ul li div span {
+    font-size: 1rem;
   }
   #container .inner.application_inquiry a {
     font-size: 1.6rem;
@@ -1266,14 +1283,17 @@ input {
     font-size: 1.3rem;
     width: 20rem;
   }
-  #container .pop_card > div button {
+  #container .pop_card > div button, #container .pop_card > div a {
     font-size: 1.3rem;
     height: 4rem;
     border-radius: 0.5rem;
   }
-  #container .pop_card > div > div button {
+  #container .pop_card > div > div button, #container .pop_card > div > div a {
     font-size: 1.3rem;
     height: 4rem;
     width: 48.5%;
+  }
+  #container .pop_card > div > div a {
+    line-height: 4rem;
   }
 }
