@@ -1,5 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -53,6 +53,9 @@ input {
   outline: 0;
 }
 
+.button {
+  cursor: pointer;
+}
 .button:active {
   transform: scale(0.95);
 }
@@ -610,7 +613,6 @@ input {
   background-image: url("../img/common/ico_search.png");
   background-repeat: no-repeat;
   background-size: cover;
-  cursor: pointer;
   position: absolute;
   top: 50%;
   right: 2rem;
@@ -834,7 +836,6 @@ input {
 #container .pop_card > div a {
   line-height: 5.4rem;
   text-align: center;
-  cursor: default;
 }
 #container .pop_card > div > div {
   display: flex;

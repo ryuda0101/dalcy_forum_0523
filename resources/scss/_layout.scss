@@ -503,7 +503,6 @@
                             background-image:url('../img/common/ico_search.png');
                             background-repeat:no-repeat;
                             background-size:cover;
-                            cursor: pointer;
                             position:absolute; top:50%; right:2rem;
                             transform:translateY(-50%);
                             &:active {
@@ -712,7 +711,6 @@
             a {
                 line-height:5.4rem;
                 text-align:center;
-                cursor:default;
             }
             >div {
                 display:flex; justify-content:space-between;

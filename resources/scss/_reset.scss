@@ -1,5 +1,4 @@
 * {margin:0; padding:0;}
-// font-family: 'Noto Sans KR', sans-serif;
 html {
     // 드래그나 더블 클릭을 사용한 텍스트 선택을 제어하는 명령어
     -webkit-user-select:none;
@@ -23,6 +22,7 @@ body {line-height:1;}
 button {border:none;}
 input {outline:0}
 .button {
+    cursor: pointer;
     &:active {transform:scale(0.95);}
 }
 
@@ -30,5 +30,4 @@ input {outline:0}
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
 
 // 폰트 관련 링크
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
