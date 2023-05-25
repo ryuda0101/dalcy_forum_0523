@@ -6,6 +6,7 @@
 }
 
 html {
+  -webkit-user-select: none;
   font-size: 62.5%;
 }
 
@@ -65,6 +66,7 @@ input {
   text-align: center;
   line-height: 1.8rem;
   font-size: 1.2rem;
+  opacity: 0.5;
 }
 
 #container {
@@ -92,11 +94,13 @@ input {
   display: flex;
   margin: 2.5rem -4.5rem 12rem -4.5rem;
   margin-bottom: 12rem;
+  position: relative;
+  z-index: 1;
 }
-#container .inner.main .logo_wrap h1:last-child {
+#container .inner.main .logo_wrap a:last-child {
   margin-left: 2.5rem;
 }
-#container .inner.main .logo_wrap h1 a img {
+#container .inner.main .logo_wrap a img {
   width: 100%;
 }
 #container .inner.main .title {
@@ -193,14 +197,15 @@ input {
   padding: 2rem 0;
 }
 #container .inner.main table thead tr th:first-child {
-  width: 30%;
+  width: 25%;
 }
 #container .inner.main table thead tr th:nth-child(2) {
-  width: 32%;
+  width: 35%;
   text-align: start;
+  padding-left: 4rem;
 }
 #container .inner.main table thead tr th:last-child {
-  width: 38%;
+  width: 40%;
   text-align: start;
 }
 #container .inner.main table tbody tr td {
@@ -214,20 +219,25 @@ input {
 }
 #container .inner.main table tbody tr td span.detail {
   display: none;
+  opacity: 0.7;
+  margin-top: 0.1rem;
 }
 #container .inner.main table tbody tr td:first-child {
-  width: 30%;
+  width: 25%;
   text-align: center;
+  opacity: 0.7;
 }
 #container .inner.main table tbody tr td:nth-child(2) {
-  width: 32%;
+  width: 35%;
   font-size: 1.8rem;
   border-bottom: 0.1rem solid #2c85e6;
+  padding-left: 4rem;
 }
 #container .inner.main table tbody tr td:last-child {
   font-size: 1.8rem;
-  width: 38%;
+  width: 40%;
   border-bottom: 0.1rem solid #2c85e6;
+  opacity: 0.7;
 }
 #container .inner.main table tr {
   background-color: #0d2845;
@@ -824,7 +834,7 @@ input {
 #container .pop_card > div a {
   line-height: 5.4rem;
   text-align: center;
-  cursor: auto;
+  cursor: default;
 }
 #container .pop_card > div > div {
   display: flex;
@@ -959,15 +969,15 @@ input {
   #container .inner.main .logo_wrap {
     margin: 0.2rem -1rem 0;
   }
-  #container .inner.main .logo_wrap h1:last-child {
-    margin-left: 1.5rem;
-  }
-  #container .inner.main .logo_wrap h1 a {
+  #container .inner.main .logo_wrap a {
     display: block;
     width: 5.4rem;
     height: 1.7rem;
   }
-  #container .inner.main .logo_wrap h1 a img {
+  #container .inner.main .logo_wrap a:last-child {
+    margin-left: 1.5rem;
+  }
+  #container .inner.main .logo_wrap a img {
     vertical-align: super;
   }
   #container .inner.main .title {
@@ -985,7 +995,7 @@ input {
     position: absolute;
     top: -0.5rem;
     right: 50%;
-    transform: translateX(74%);
+    transform: translateX(77%);
   }
   #container .inner.main p {
     white-space: pre-wrap;
@@ -1040,11 +1050,13 @@ input {
     padding: 1.2rem 0;
   }
   #container .inner.main table thead tr th:first-child {
-    width: 32%;
+    width: 35%;
   }
   #container .inner.main table thead tr th:nth-child(2) {
     width: 68%;
     text-align: center;
+    padding-left: 2rem;
+    text-align: start;
   }
   #container .inner.main table thead tr th:last-child {
     display: none;
@@ -1062,11 +1074,11 @@ input {
     margin-left: 0;
   }
   #container .inner.main table tbody tr td:first-child {
-    width: 32%;
+    width: 35%;
   }
   #container .inner.main table tbody tr td:nth-child(2) {
     font-size: 1rem;
-    padding-left: 6rem;
+    padding-left: 2rem;
   }
   #container .inner.main table tbody tr td:last-child {
     display: none;
@@ -1157,7 +1169,7 @@ input {
     height: 32rem;
     top: -78.1rem;
     left: 50%;
-    transform: translateX(-23%);
+    transform: translateX(-24%);
   }
   #container .inner.application_inquiry > div {
     max-width: 32rem;
@@ -1195,7 +1207,7 @@ input {
     height: 32rem;
     top: -0.1rem;
     left: 50%;
-    transform: translateX(-23%);
+    transform: translateX(-24%);
     background-image: url("../img/common/bg_mobile_done.png");
     background-repeat: no-repeat;
     background-size: cover;

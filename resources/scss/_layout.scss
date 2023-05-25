@@ -7,6 +7,7 @@
             text-align:center;
             line-height:1.8rem;
             font-size:1.2rem;
+            opacity:0.5;
         }
     }
 }
@@ -32,11 +33,10 @@
                 display:flex;
                 margin:2.5rem -4.5rem 12rem -4.5rem;
                 margin-bottom:12rem;
-                h1 {
+                position:relative; z-index:1;
+                a {
                     &:last-child {margin-left:2.5rem;}
-                    a {
-                        img {width:100%;}
-                    }
+                    img {width:100%;}
                 }
             }
             .title {
@@ -117,14 +117,15 @@
                             font-size:2.5rem; font-weight:bold;
                             padding:2rem 0;
                             &:first-child {
-                                width:30%;
+                                width:25%;
                             }
                             &:nth-child(2) {
-                                width:32%;
+                                width:35%;
                                 text-align:start;
+                                padding-left:4rem;
                             }
                             &:last-child {
-                                width:38%;
+                                width:40%;
                                 text-align:start;
                             }
                         }
@@ -139,21 +140,24 @@
                                 display: inline-block;
                                 margin-left:5.5rem;
                                 font-size:1.5rem;
-                                &.detail {display:none;}
+                                &.detail {display:none; opacity:0.7; margin-top:0.1rem;}
                             }
                             &:first-child {
-                                width:30%;
+                                width:25%;
                                 text-align:center;
+                                opacity:0.7;
                             }
                             &:nth-child(2) {
-                                width:32%;
+                                width:35%;
                                 font-size:1.8rem;
                                 border-bottom:0.1rem solid #2c85e6;
+                                padding-left:4rem;
                             }
                             &:last-child {
                                 font-size:1.8rem;
-                                width:38%;
+                                width:40%;
                                 border-bottom:0.1rem solid #2c85e6;;
+                                opacity:0.7;
                             }
                         }
                     }
@@ -708,7 +712,7 @@
             a {
                 line-height:5.4rem;
                 text-align:center;
-                cursor:auto;
+                cursor:default;
             }
             >div {
                 display:flex; justify-content:space-between;
@@ -869,14 +873,12 @@
                 position: relative;
                 .logo_wrap {
                     margin:0.2rem -1rem 0;
-                    h1 {
+                    a {
                         &:last-child {margin-left:1.5rem;}
-                        a {
-                            display:block;
-                            width:5.4rem; height:1.7rem;
-                            img {
-                                vertical-align:super;
-                            }
+                        display:block;
+                        width:5.4rem; height:1.7rem;
+                        img {
+                            vertical-align:super;
                         }
                     }
                 }
@@ -891,11 +893,7 @@
                         background-image:url('../img/common/bg_mobile_done.png');
                         position:absolute;
                         top:-0.5rem; right:50%;
-                        transform:translateX(74%);
-                        
-                        // width:48rem;
-                        // height:28.5rem;
-                        // top:-23.5rem; right:-10rem;
+                        transform:translateX(77%);
                     }
                 }
                 p {
@@ -947,11 +945,13 @@
                                 font-size:1rem;
                                 padding:1.2rem 0;
                                 &:first-child {
-                                    width:32%;
+                                    width:35%;
                                 }
                                 &:nth-child(2) {
                                     width:68%;
                                     text-align:center;
+                                    padding-left:2rem;
+                                    text-align:start;
                                 }
                                 &:last-child {
                                     display:none;
@@ -973,11 +973,11 @@
                                     }
                                 }
                                 &:first-child {
-                                    width:32%;
+                                    width:35%;
                                 }
                                 &:nth-child(2) {
                                     font-size:1rem;
-                                    padding-left:6rem;
+                                    padding-left:2rem;
                                 }
                                 &:last-child {
                                     display:none;
@@ -1070,7 +1070,7 @@
                 &::after {
                     width:74.9rem; height:32rem;
                     top:-78.1rem; left:50%;
-                    transform:translateX(-23%);
+                    transform:translateX(-24%);
                 }
                 >div {
                     max-width:32rem;
@@ -1109,7 +1109,7 @@
                     display: block;
                     width:74.9rem; height:32rem;
                     top:-0.1rem; left:50%;
-                    transform:translateX(-23%);
+                    transform:translateX(-24%);
                     background-image:url('../img/common/bg_mobile_done.png');
                     background-repeat:no-repeat;
                     background-size:cover;
