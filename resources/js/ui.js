@@ -49,13 +49,13 @@ window.onload = () => {
         // 필수입력사항 안썼을 때 팝업 출력
         require.forEach((item, index) => {
             if(item.querySelector('div input').value.length == 0) {
-                require_pop.querySelector('div h4').innerHTML = require_context[index] + ' 입력해 주세요';
+                require_pop.querySelector('div h4').innerHTML = require_context[index] + ' 입력해 주세요.';
                 require_pop.classList.add('on');
             }
         });
         // 개인정보 동의 안했을 때 팝업 출력
         if(!check_box.checked) {
-            require_pop.querySelector('div h4').innerHTML = '개인정보 이용동의 안함';
+            require_pop.querySelector('div h4').innerHTML = '개인정보 이용 동의는 필수입니다.';
             require_pop.classList.add('on');
         }
     });
@@ -71,5 +71,4 @@ window.onload = () => {
             }
         });
     });
-
 }
